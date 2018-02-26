@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Encapsulación & Patrón chain (Cadena)</title>
+</head>
+
+<body>
+  <!-- primera declaración del script -->
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function () {
+      objeto.incrementar(); // 1
+      objeto.incrementar(); // 2
+      console.log(objeto.getX());
+    })();
+  </script>
+
+  <!-- segunda declaración del script -->
+  <script src="./js/app.js"></script>
+
+  <script>
+    (function () {
+      // se usa el patrón cadena
+      objeto.incrementar().incrementar(); // 3 y 4
+      console.log(objeto.getX());
+    })();
+  </script>
+</body>
+
+</html>
